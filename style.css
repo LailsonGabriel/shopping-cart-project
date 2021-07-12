@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: roboto;
+}
+
+body {
+  background-color: #dfe4ea;
+}
+
+.top-bar {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.top-bar .input-name-group {
+  align-items: flex-start;
+  display: flex;
+}
+
+.top-bar .input-terms-group {
+  align-items: flex-start;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  z-index: 6;
+}
+
+.items {
+  display: flex;
+  flex-basis: 70%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  background-color: #b2bec3;
+  border: 3px solid #5f27cd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 5px;
+  width: 200px;
+  animation: all 0.5s;
+}
+
+.cart__title {
+  margin-top: 10px;
+}
+
+.item .item__sku {
+  display: none;
+}
+
+.item .item__title {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+  font-family: roboto;
+  color: #2f3542;
+}
+
+.item .item__image {
+  width: 100%;
+}
+
+.item .item__add {
+  color: white;
+  background-color: #5f27cd;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 5px;
+}
+
+.empty-cart {
+  margin: 0 auto;
+  width: 200px;
+  margin-bottom: 10px;
+  border: none;
+  color: white;
+  background-color: #5f27cd;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.empty-cart:hover {
+  cursor: pointer;
+  transform:scale(1.1);
+}
+
+.item:hover{
+  transform: scale(1.05);
+}
+
+.cart {
+  display: flex;
+  flex-basis: 30%;
+  flex-flow: column wrap;
+  margin-left: 20px;
+  background-color: #dfe4ea;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.cart__item {
+  transition: all 0.5s;
+  color: white;
+  margin-top: 10px;
+  background-color: #636e72;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cart__item:hover {
+  cursor: pointer;
+  transform:scale(1.1);
+}
+
+.cart .cart__title {
+  flex-basis: 1;
+  font-size: 16pt;
+  text-align: center;
+}
+
+.cart__items {
+  padding: 25px;
+  list-style: none;
+}
+
+.total-price {
+  margin: 0 auto;
+}
+
+.loading {
+  font-size: 20px;
+  font-family: Ubuntu;
+  text-align: center;
+  visibility: visible;
+}
+
+.display {
+  visibility: visible;
+}
+
+.value-item {
+  display: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilizar botão */
+
+input[type = "checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background: #092c3e;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+}
+
+input[type = "checkbox"]:checked ~ .check{
+  background: #fff;
+  box-shadow: 0 0 0 5000px #092c3e;
+}
+.check:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input[type = "checkbox"]:checked ~ .check:before {
+  transform: translateX(-50px);
+}
+
+.check:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #092c3e;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translateX(50px);
+}
+input[type = "checkbox"]:checked ~ .check:after{
+  transform: translateX(0px);
+}
+
+.labe {
+  position: relative;
+  z-index: 1;
+}
+
+.menu h3 {
+  margin-right: 20px;
+  color: #dfe4ea;
+  position: relative;
+  z-index: 3;
+}
+
+.menu {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3436;
+  margin-bottom: 20px;
+}
